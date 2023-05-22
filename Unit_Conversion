@@ -1,0 +1,742 @@
+import java.util.*;
+import java.lang.*;
+import java. util.Date;
+ // Compiler version JDK 11.0.2
+
+ class Dcoder
+ {
+   public static void cal()
+   { 
+ Date date=new Date();
+ System. out. println("              "    +date);
+     System. out. println("         \t \t\t\t\t\t\t\t\t-----------\t\t\t\t\t");
+    System.out.println("         \t\t\t\t\t\t\t\t  CALCULATOR \t\t\t\t\t ");
+   System. out. println("         \t \t\t\t\t\t\t\t\t-----------\t\t\t\t\t") ;
+    System. out. println("");
+    String c, s;
+    long i;
+    long f=1;
+    long  fact=1;
+    double re=1;
+    double l;
+    
+   //Basically do while loop use for repeat loop
+          
+          do
+          {
+    Scanner sc=new Scanner(System.in);
+    double res=1;
+    System. out. println("\nEnter a first number");
+    double a=sc.nextDouble();
+    System. out. println("");
+    System. out.println("Enter a secound number");
+    double b=sc.nextDouble();
+    System. out. println("");
+    System. out. println("       ------------------\n       | 1) Add      (+)|\n       | 2) Subtract (-)|\n       | 3) Multiply (*)|\n       | 4) Division (/)|\n       | 5) Modulas  (%)|\n       | 6) Root     (√)|\n       | 7) Factorial(!)|\n       | 8) Greater  (>)|\n       | 9) Less     (<)|\n       |10) Power    (^)|\n       |11) Log      (L)|       ");
+    System. out. println("       |12) ln       (n)|\n       |13) Trigono  (t)|\n       |14) Even odd (e)|\n       |15) Prime not(p)|\n       ------------------");
+    System. out. print("       Choose Sign :- ");
+    char ch=sc.next().charAt(0);
+   
+    if(ch=='+')
+    {
+      res=a+b;
+      System. out. println("\nAdd two number="+res);
+    }
+   else if(ch=='-') 
+   {
+     res=a-b;
+     System. out. println("\nsubstraction of two nuber="+res);
+   }
+   else if(ch=='*')
+   {
+     res=a*b;
+     System. out. println("\nMultiplying of two number="+res);
+   }
+   else if(ch=='/')
+   {
+     res=a/b;
+     System. out. println("\nDivisions of two number="+res);
+   }
+   else if(ch=='%')
+   {
+     res=a%b;
+     System. out. println("\nModulas of two number="+res);
+   }
+   else if(ch=='r')
+   {
+     res=Math.sqrt(a);
+     System. out. println("\nroot of fist number= "+res);
+     res=Math.sqrt(b);
+     System. out. println("root of secound number= "+res);
+   }
+   else if(ch=='!')
+   
+   {    // This two for loop are use factorial data calculate two number
+   
+     for(i=1;i<=a;i++)
+       f=f*i;
+     System. out. println("\n factorial first no. ="+f);
+    for(i=1;i<=b;i++)
+       fact=fact*i;
+     System. out. println(" factorial secound no. ="+fact);
+
+        }
+        else if(ch=='>')
+        {
+ //This if conditions use for greatest number calculate
+          
+          if(a>b) 
+           System. out. println("\nGreater number="+a);
+          else
+          System. out. println("\nGreater number="+b);
+        }
+        else if(ch=='<')
+        {
+ //This if conditions use for smallest number calculate
+          
+          if(a<b) 
+           System. out. println("\nSmallest number="+a);
+          else
+          System. out. println("\nSmallest number="+b);
+        }
+ //Square of Number
+        else if(ch=='^')
+        {
+        //  int x=(int)a;
+       //   int q=(int)b;
+          i=(long)Math.pow((a),b);
+          System. out. println("\nSqure of first number="+i) ;
+        }
+        else if (ch=='c')
+        {
+          res=a*a*a;
+          System. out. println("cube of first number="+res);
+          
+        }
+ // Log calculate
+         
+        else if(ch=='l'||ch=='L')
+        {
+          l=Math.log10(a);
+          System. out. println("\nLog of first value = "+l);
+          double lo=Math.log10(b);
+          System. out. println("Log of second value= " +lo);
+        }
+        
+ // ln calculate
+ 
+      else if(ch=='n')
+ {
+   l=Math.log(a);
+   System. out. println("\nln of first value=" +l);
+   double lp =Math.log(b);
+   System. out. println("ln of second value=" +lp);
+ }
+    
+ // calculate sin cos tan cot sec cosec
+ 
+ else if(ch=='T'||ch=='t')   
+ {
+    double t=Math.sin(a);
+   System. out. println("\nSin"+a+ " =" +t);
+   double t1=Math.sin(b);
+   System. out. println("Sin"+b+ " =" +t1+"\n");
+   
+   double t3=Math.cos(a);
+   System. out. println("Cos"+a+ " =" +t3);
+   double t4=Math.cos(b);
+   System. out. println("Cos"+b+ " =" +t4+"\n");
+   
+   double t5=Math.tan(a);
+   System. out. println("Tan"+a+ " =" +t5);
+   double t6=Math.tan(b);
+   System. out. println("Tan"+b+ " =" +t6+"\n");
+   
+   double t7=1/Math.cos(a);
+   System. out. println("Sec"+a+ " =" +t7);
+   double t8=1/Math.cos(b);
+   System. out. println("Sec"+b+ " ="+t8+"\n");
+   
+   double t9=1/Math.sin(a);
+   System. out. println("Cosec"+a+ " =" +t9);
+   double t10=1/Math.sin(b);
+   System. out. println("Cosec"+b+ " ="+t10+ "\n");
+   
+   double t11=1/Math.tan(a);
+   System. out. println("Cot"+a+ " =" +t11);
+   double t12=1/Math.tan(b);
+   System. out. println("Cot"+b+ " ="+t12);
+ } 
+      // Even odd
+      
+      
+      else if(ch=='e' || ch=='E')
+      {
+        if(a%2==0)
+        {
+          System. out. println("\n"+ a+  " is Even number");
+         
+        }
+        else if(a%2==1)
+        {
+          System. out. println("\n"+ a+  " is Odd number");
+       
+        }
+        
+        if(b%2==0)
+        {
+          System. out. println("\n"+ b+  " is Even number");
+         
+        }
+        else if(b%2==1)
+        {
+          System. out. println("\n"+ b+  " is Odd number");
+       
+      }
+      }
+      
+      
+      //prime or not
+      
+      
+      
+     
+      else if(ch=='p' || ch=='P')
+      {
+        int temp=0;
+        for(int k=1;k<=a;k++)
+        {
+          if(a%k==0)
+          {
+            temp=temp+1;
+          }
+        }
+        if(temp==2)
+        {
+          System. out. println("\n" +a+ " is Prime number");
+        }
+        else
+        {
+          System. out. println("\n" +a+ " is not Prime number");
+        }
+        
+      
+      int count=0;
+      for(int k1=1;k1<=b;k1++)
+        {
+          if(b%k1==0)
+          {
+            count=count+1;
+          }
+        }
+        if(count==2)
+        {
+          System. out. println("\n" +b+ " is Prime number");
+        }
+        else
+        {
+          System. out. println("\n" +b+ " is not Prime number");
+        }
+         }
+        
+      
+      //  System. out. println("\u000c");
+   else 
+   {
+     System. out. println("invalid number");
+   }
+   System. out. println("");
+   System. out. print("Do you want to continue program (y/n):-"+"\n");
+   
+    c=sc.next();
+   }
+   while(c.equals("y")|| c.equals("Y"));
+   {
+     
+   }
+   System. out. println("");
+   System. out. println(" Calculator program is End:\n");
+   }
+   }
+   class AB{
+   public static void main(String args[])throws Exception
+   {
+    ABC a=new ABC ();
+    a. show();
+   }
+   }
+   
+   //**********************†********************+++++++±+++++++++
+     
+   class ABC
+   {
+     void show()
+     {
+       String ck;
+     do{
+   System. out. println("       ------------------------\n       | 1) CALCULATOR     (C)|\n       | 2) UNIT CONVERSION(U)|\n       | 3) CALANDER (K)      |") ;
+   System. out. print("\t \t\t\t------------------------       \n        Choose Sign :- ");
+    Scanner sc=new Scanner(System.in);
+    char ch=sc.next(). charAt(0);
+    if(ch=='C'||ch=='c')
+    {
+      Dcoder.cal();
+    }
+    else if(ch=='U' || ch=='u')
+    {
+      Unit. unit();
+    }
+    else if(ch=='K'|| ch=='k')
+    {
+      Calender. calender();
+    }
+    else if(ch=='e'||ch=='E')
+    {
+      
+    }
+       else 
+   {
+     System. out. println("invalid number");
+   }
+   System. out. println("**Are you open Calculator, UnitConversion & calender?************ \n");
+   System. out. print("Do you want to continue program (y/n):-"+"\n");
+      ck=sc.next();
+    }
+   while(ck.equals("y")|| ck.equals("Y"));
+   {
+     
+   }
+   System. out. println("");
+   System. out. println(" \n\nThis program is End:\n Any suggest me please send  massege\n**** pandeyrahul59454@gmail.com********");
+     }
+   }
+   //*†*****************************"""""""""""""
+   class Unit
+   {
+     static void unit()
+     {
+   
+   Date date=new Date();
+   System. out.println("               " +date);
+     System. out. println("         \t \t\t\t\t\t\t\t\t----------------\t\t\t\t\t");
+    System.out.println("         \t\t\t\t\t\t\t\t  UNIT CONVERSION \t\t\t\t\t ");
+   System. out. println("         \t \t\t\t\t\t\t\t\t----------------\t\t\t\t\t") ;
+    System. out. println("");
+    String c;
+    do
+    {
+     Scanner sc=new Scanner(System.in);
+     float a, f;
+     
+     System. out. println("\n\n\n       --------------------\n       | 1) DISTANCE      |\n       | 2) TEMPERATURE   |\n       | 3) WEIGHT        |\n       | 4) TIME          |\n        | 5)       --------------------       ");
+    System. out. print("       Choose number :-");
+  
+     char ch=sc.next(). charAt(0);
+     
+     if(ch=='1')     //  case 1
+     
+     { 
+       System. out. println("         ------------\n         |1) Length |\n         |2) Volume |\n         |3) Area   |\n         ------------");
+       System. out. print("      Chose number :-");
+       char pr=sc.next(). charAt(0);
+       if(pr=='1')
+       {
+         System. out. println("        --------------------------------\n        1) Matric(km m cm mm)  \n        2) Standard(Inch Feet yrs mile)    \n       -------------------------------- ");
+      System. out. print("       Chose number :-");
+      char chr=sc.next(). charAt(0);
+      if(chr=='1')
+      {
+       System. out. println("");
+       System. out. println("        1) km to m");
+       System.out.println("        2) m to km\n        3) km to cm\n        4) m to cm\n        5) cm to km\n        6) km to mm\n        7) mm to km");
+       System. out. println("        -----------");
+       System. out. print("      Chose number :-");
+       
+       char s=sc.next(). charAt(0);
+       
+                //case1 of case1 of case1
+                
+     if(s=='1')
+   {
+     System. out. println("");
+      System. out.println("Enter a value Kilometre");
+          a=sc.nextFloat();
+          f=a*1000;
+          System. out. println("Miter=" +f);
+          
+     }
+     else if(s=='2')
+     {
+    System. out.println("Enter a value Miters");
+          a=sc.nextFloat();
+          f=a/1000;
+       System. out. println("Kilometre=" +f);
+       }
+       else if(s=='3')
+       {
+         System. out.println("Enter a value kilometre");
+          a=sc.nextFloat();
+          f=a*100000;
+          System. out. println("centimeter="+f);
+       }
+       else if( s=='4')
+       {
+         System. out.println("Enter a value miters");
+          a=sc.nextFloat();
+          f=a*100;
+          System. out. println(" centimeter=" +f);
+       }
+       else if(s=='5')
+       {
+         System. out.println("Enter a value centimeter");
+          a=sc.nextFloat();
+          f=a/100000;
+          System. out.println ("kilometre=" +f);
+       }
+       else if(s=='6')
+       {
+         System. out. println("Enter a value kilometer");
+         a=sc.nextFloat();
+         f=a*1000000;
+         System. out. println("millimeter=" +f);
+       }
+       else if(s=='7')
+       {
+         System. out. println("Enter a value millimeter");
+         a=sc.nextFloat();
+         f=a/1000000;
+         System. out. println("kilometers=" +f);
+       }
+       }
+       
+  //case1 of case1 of case2
+  
+       else if (chr=='2')
+       {
+         System. out. println("\n       1) Feet to inch\n       2) yard to feet\n       3) mile to yard\n       4) inch to feet\n       5) inch to cm") ;
+        System. out. print("\n        Chose number :-");
+        char s1=sc.next(). charAt(0);
+        
+          if(s1=='1')
+          {
+            System. out. println("Enter a value feet");
+            a=sc.nextFloat();
+            f=a*12;
+            System. out. println("Inch=" +f);
+          }
+          else if(s1=='2')
+          {
+            System. out. println("Enter a value yard");
+            a=sc.nextFloat();
+            f=a*3;
+            System. out. println("Feet="+f);
+          }
+          else if(s1=='3')
+          {
+            System. out. println("Enter a value mile");
+            a=sc.nextFloat();
+            f=a*1760;
+            System. out. println("Yard=" +f);
+          }
+          else if(s1=='4')
+          {
+            System. out. println("Enter a value inch");
+            a=sc.nextFloat();
+            f=a/12;
+            System. out. println("Feet=" +f);
+          }
+          else if(s1=='5')
+          {
+          System. out. println("Enter a value inch");
+            a=sc.nextFloat();
+            double p=a*2.54;
+            System. out. println("centimeter =" +a);
+          }
+          
+        }
+        }
+                            //case1 of case2 of case2
+      else  if(pr=='2')
+        {
+          System. out. println("         1) Metric(cubic cm m inch feet )\n         2) Standard(cubic foot yard) \n");
+     System. out. print("      Chose number :-");
+     
+    System. out. println("       1) cub cm to m\n      2) cub m to cm\n        3) cub inch to feet\n      4) cub cm to inch\n");
+    System. out. println("          Chose number");
+        
+            char s=sc.next(). charAt(0);
+        if(s=='1')
+        {
+          
+        }
+        else if(s=='2')
+        {
+          
+        }
+        else if(s=='3')
+        {
+        
+        
+          
+        }
+        else if (s=='4')
+        {
+          
+        }
+        
+        }  
+               //case1 of case2 of case3
+               
+        else if(pr=='3')
+        {
+          System. out. println("\n          1) Metric(square cm m inch feet)\n          2) Standard (square foot yard)        \n");
+          System. out. println("          Chose number :-");
+       
+          char s=sc.next(). charAt(0);
+          if(s=='1')
+          {
+            
+          }
+          else if(s=='2')
+          {
+            
+          }
+          else if(s=='3')
+          {
+            
+          }
+          else if(s=='4') 
+          {
+            
+          }
+        }
+        }
+       
+         
+        
+         
+         //case2 Temperatures
+              
+              
+       else if(ch=='2') 
+       {
+         System. out. println ("");
+       System. out. println("       1) °C to °F");
+   System. out. println("       2) °F to °C");
+   System. out. print("\n      chose sign:-");
+   char s=sc.next(). charAt(0);
+      if(s=='1')
+       {
+         System. out. println("Enter a Value Celsius");
+        a=sc.nextFloat();
+     f=(a*(9f/5))+32;
+     System. out. println(" Fahrenheit=" +f);
+   }
+   else if(s=='2')
+   {
+     System. out. println("\nEnter a Value Fahrenheit");
+    a=sc.nextFloat();
+     f=((a*5)-160)/9;
+    System. out. println("Digree celsius=" +f);
+   }
+   }
+                  // case weight
+                  
+     else if(ch=='3')
+       {
+         System. out. println("\n1) Kilogram to gram\n2) Gram to killogram");
+         System. out. println("\n          chose sign:-");
+         char s=sc.next(). charAt(0);
+         if(s=='1')
+         {
+         System. out. println("Enter a kilogram value");
+           a=sc.nextFloat();
+           f=a*1000;
+           System. out. println("Gram=" +f);
+         }
+         else if(s=='2')
+         {
+           System. out. println("Enter a gram value");
+           a=sc.nextFloat();
+           f=a/1000;
+           System. out. println("Kilogram="+f);
+         }
+       }
+       
+       ////case Time 
+       
+       else if(ch=='4')
+       {
+         System. out. println("\n 1) Hours to minute\n 2) Hours to secound\n 3) minute to secound\n 4) secound to Hours\n 5) secound to minute");
+        System. out. print("\n        chose sign:-");
+               char s=sc.next(). charAt(0);
+        if(s=='1')
+        {
+          System. out.println("Enter a value hours");
+          a=sc.nextFloat();
+          f=a*60;
+          System. out. println("Minute=" +f);
+        }
+        else if(s=='2')
+        {
+          System. out.println("Enter a value hours");
+          a=sc.nextFloat();
+          f=a*60*60;
+          System. out.println("Second=" +f);
+        }
+        else if(s=='3')
+        {
+          System. out.println("Enter a value Minute");
+          a=sc.nextFloat();
+          f=a*60;
+          System. out. println("second="+f);
+        }
+        else if(s=='4')
+        {
+          System. out.println("Enter a value Second");
+          a=sc.nextFloat();
+          f=a/3600;
+          System. out. println("Hours=" +f);
+        }
+        else if(s=='5')
+        {
+          System. out.println("Enter a value second");
+          a=sc.nextFloat();
+          f=a/60;
+          System. out. println("Minute=" +f);
+        }
+       }
+       
+       
+       else
+       {
+         System. out. println("Invalid number");
+       }
+  System. out. println("");
+   System. out. print("Do you want to continue program (y/n):-");
+   
+    c=sc.next();
+   }
+   while(c.equals("y")|| c.equals("Y"));
+   {
+     
+   }
+   System. out. println("");
+ System. out. println("          Unit conversion program End:-\n") ;
+  
+     }
+   }
+   class Calender
+   {
+     static void calender() 
+     {
+       String sk;
+       Date dt=new Date();
+    System. out. println("                   "+dt);
+     int d=1;
+       do{
+    Scanner sc=new Scanner (System.in);
+    
+     System.out.println("Enter Year");
+      int y=sc.nextInt();
+      for(int m=1;m<=12;m++)
+      {
+        switch(m)
+        {
+          case 1: System.out.println("      "+y+"      January\n");break;
+          case 2: System.out.println("      "+y+"      February\n");break;
+          case 3: System.out.println("      "+y+"      March\n");break;
+          case 4: System.out.println("      "+y+"      April\n");break;
+          case 5: System.out.println("      "+y+"      May\n");break;
+          case 6: System.out.println("      "+y+"      June\n");break;
+          case 7: System.out.println("      "+y+"      July\n");break;
+          case 8: System.out.println("      "+y+"      August\n");break;
+          case 9: System.out.println("      "+y+"      September\n");break;
+          case 10: System.out.println("      "+y+"     October\n");break;
+          case 11: System.out.println("      "+y+"     November\n");break;
+          case 12: System.out.println("      "+y+"     December\n");break;
+        }
+      
+      int s=0;
+      for(int i=Math.min(2019,y);i<Math.max(2019,y);i++)
+      {
+        if((i%100==0 && i%400==0) || (i%100!=0 && i%4==0))
+         s=s+366;
+        else
+         s=s+365;
+      }
+      int x=0;
+      for(int i=1;i<m;i++)
+      {
+        switch(i)
+        {
+          case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+            x=x+31;break;
+          case 4:case 6:case 9:case 11:
+            x=x+30;break;
+          case 2:
+            if((y%100==0 && y%400==0) || (y%100!=0 && y%4==0))
+               x=x+29;
+              else
+               x=x+28;
+              break;
+          
+        }
+      }
+      x=x+d;
+      if(y<2019)
+       s=(0-s+x)%7+7;
+      else
+       s=s+x;
+      s=s%7;
+      switch(m)
+        {
+          case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+            x=31;break;
+          case 4:case 6:case 9:case 11:
+            x=30;break;
+          case 2:
+            if((y%100==0 && y%400==0) || (y%100!=0 && y%4==0))
+               x=29;
+              else
+               x=28;
+              break;
+        }
+      System.out.println("Mon\tTue\tWed\tThu\tFri\tSat\tSun");
+      int v=1;
+      while(v<=x)
+      {
+        for(int i=0;i<=6;i++)
+        {
+          if(v==1 && i<s)
+           System.out.print("   \t");
+          else
+            System.out.print((v++)+" \t");
+          if(v<10 && v>1)
+           System.out.print(" ");
+          if(v==10)
+           System.out.print(" ");
+          
+          if(v>x)
+           break;
+          
+        }
+        System.out.println();
+      }
+      System.out.println();
+      }
+      
+  System. out. println("Are you open calender? \n");
+   System. out. print("Do you want to continue program (y/n):-");
+   
+    sk=sc.next();
+   }
+   while(sk.equals("y")|| sk.equals("Y"));
+   {
+     
+   }
+   System. out. println("");
+ System. out. println("          Calender program End:-\n") ;
+ 
+    }
+ }
